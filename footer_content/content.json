@@ -1,0 +1,9 @@
+{
+    "category": ["Fantasic", "Sci-fi"],
+    "directory" : {
+        "director": ["Joaquim Dos Santos", "Kemp Powers"],
+        "writer": ["Steve Ditko", "Stan Lee", "Chris McKenna"]
+    },
+    "storyline": "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero.",
+    "stars": ["Shameik Moore","Hailee Steinfeld","Brian Tyree Henry"]
+}
