@@ -5,20 +5,30 @@ import MenuItem from './MenuItem'
 import Logo from './Logo'
 import Avatar from './Avatar'
 import Search from './Search'
-
+import {usePathname} from 'next/navigation'
 const Navbar = () => {
+  const path = usePathname()
+  
+  const check = (pathName: string) => {
+    if(path === pathName){
+      return true
+    }
+    else {
+      return false
+    }
+  }
   return (
-    <div className='relative flex flex-row h-24 w-auto py-3 px-24 bg-gray-800/40 border-t-[5px] border-t-gray-400 justify-between'>
+    <div className='flex flex-row h-24 w-auto py-3 px-24 bg-gray-800/40 border-t-[5px] border-t-gray-400 justify-between'>
       <div className='flex flex-row items-center'>
         <Logo/>
         <div className='flex flex-row mx-16'>
-          <MenuItem title='Home' isChose={true}/>
-          <MenuItem title='Movies'/>
-          <MenuItem title='News'/>
-          <MenuItem title='Blog'/>
-          <MenuItem title='My List'/>
-          <MenuItem title='About'/>
-          <MenuItem title='Contact'/>
+          <MenuItem title='Home' isChose={check('/')}/>
+          <MenuItem title='Movies' isChose={check('/movies')}/>
+          <MenuItem title='News' isChose={check('/news')}/>
+          <MenuItem title='Blog' isChose={check('/blog')}/>
+          <MenuItem title='My List' isChose={check('/my%20list')}/>
+          <MenuItem title='About' isChose={check('/about')}/>
+          <MenuItem title='Contact' isChose={check('/contact')}/>
         </div>
       </div>
 

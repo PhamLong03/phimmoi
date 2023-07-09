@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Footer, Navbar } from '@/components'
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,13 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <div className='absolute flex flex-col h-screen w-screen justify-between'>
-          <Navbar/>
-          <Footer/>
-        </div>
-      </body>
+        <body className={inter.className}>
+            <Navbar/>
+            {children}
+        </body>
     </html>
   )
 }

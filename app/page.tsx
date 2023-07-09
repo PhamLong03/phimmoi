@@ -1,16 +1,11 @@
+import { getMovie, importMovie } from '@/prisma/movies'
 import Image from 'next/image'
 
-export default function Home() {
+export default async function Home() {
+  const data = await getMovie("spider-man-across-the-spider-verse")
   return (
     <main>
-      <div className='absolute h-screen w-screen' >
-        <Image
-          src="/background.webp" 
-          alt="background"
-          fill
-          objectFit='cover'
-        />
-      </div>
+      
     </main>
   )
 }
