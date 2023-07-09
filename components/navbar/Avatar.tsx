@@ -12,8 +12,8 @@ const Avatar = ({
     <Image
         alt='avatar'
         src={img? img : '/profile-placeholder.png'}
-        width={65}
-        height={50}
+        width={40}
+        height={40}
         className='rounded-full'
     />
   )

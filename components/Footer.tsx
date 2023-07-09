@@ -7,7 +7,7 @@ const Footer = ({
   movie?: movies
 }) => {
   return (
-    <div className='absolute flex flex-row w-[23px] overflow-hidden h-72 bg-slate-900/80 rounded-tr-[90px] bottom-0 justify-evenly hover:w-[800px] duration-200'>
+    <div className='absolute flex flex-row w-[800px] overflow-hidden h-72 bg-slate-900/80 rounded-tr-[90px] bottom-0 justify-evenly hover:w-[800px] duration-200'>
       <div className='text-white w-1/2 h-auto flex flex-col ml-16 my-10 justify-between'>
         <div className='font-semibold'>
           CATEGORY

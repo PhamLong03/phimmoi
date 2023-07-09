@@ -4,7 +4,8 @@ const nextConfig = {
         domains: [ 
             "i.kinja-img.com",
             "m.media-amazon.com",
-            "musicart.xboxlive.com"
+            "musicart.xboxlive.com",
+            "images8.alphacoders.com"
         ]
     }
 }

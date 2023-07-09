@@ -4,8 +4,8 @@ import prisma from "./prisma";
 export async function importMovie (){
     return await prisma.movies.create({
         data:{
-            id: "movies 02",
-            name: "Spider-man: Across the Spider-verse",
+            id: "movies 03",
+            name: "Spider-man",
             slug: "spider-man-across-the-spider-verse-2",
             thumbnails: "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/461ef09d460b5b4e4365c2826823db04.png",
             pictures: ["https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/461ef09d460b5b4e4365c2826823db04.png"],
@@ -27,7 +27,10 @@ export async function getMovie(slug: string) {
 }
 export async function getAllMovie() {
     return await prisma.movies.findMany({
-        take:10
+        take:10,
+        orderBy: {
+            id: 'asc'
+        }
     })
 }
 export default {
