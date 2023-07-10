@@ -1,17 +1,20 @@
-import { getMovie, importMovie } from '@/prisma/movies'
-import Image from 'next/image'
+import TrendingReels from '@/components/TrendingReels'
+import { getAllMovie, getMovie, importMovie } from '@/prisma/movies'
 
 export default async function Home() {
-  const data = await getMovie("spider-man-across-the-spider-verse")
+  const movies = await getAllMovie()
   return (
-    <main>
-      <div className="h-screen max-h-screen flex flex-col justify-between">
-        <img
-            alt=''
-            className='h-screen w-screen'
-            src='/background.jpg'
-        />
-      </div> 
+    <main >
+      <div className='mt-3 mx-6'>
+        <span className='text-white font-semibold text-lg'>
+          Trending movies
+        </span>
+        <div className='flex flex-row w-full h-auto mt-2 rounded-2xl overflow-x-scroll'>
+          {movies.map((movie)=>(
+            <TrendingReels movie={movie}/>
+          ))}
+        </div>
+      </div>
     </main>
   )
 }

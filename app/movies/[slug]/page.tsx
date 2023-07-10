@@ -1,8 +1,6 @@
 import { Footer } from '@/components'
 import MovieTitle from '@/components/MovieTitle'
 import { getMovie } from '@/prisma/movies'
-import { movies } from '@prisma/client'
-import Image from 'next/image'
 import React from 'react'
 
 const MovieId = async ({
@@ -22,8 +20,10 @@ const MovieId = async ({
             className='h-screen w-screen'
             src={movie?.pictures[0] || ''}
         />
-        <MovieTitle title={movie?.name}/>
-      <div> 
+        <div className='absolute mt-28 ml-24'>
+          <MovieTitle title={movie?.name}/>
+        </div>
+      <div className='sticky bottom-0'> 
           <Footer movie={movie || undefined}/>
       </div>
     </div>
